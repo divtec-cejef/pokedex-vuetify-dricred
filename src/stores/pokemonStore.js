@@ -1,21 +1,18 @@
 import { defineStore } from 'pinia'
 
 const typeColors = {
-  Électrique: '#FFD700',
-  Plante: '#78C850',
-  Poison: '#A040A0',
-  Feu: '#F08030',
-  Eau: '#6890F0',
-  Normal: '#A8A878',
-  Fée: '#EE99AC',
-  Spectre: '#705898',
-  Combat: '#C03028',
-  Vol: '#A890F0',
-  Glace: '#98D8D8',
-  Roche: '#B8A038',
-  Sol: '#E0C068',
-  Psy: '#F85888',
+  Gardien: '#1E90FF',
+  DéfenseurCentral: '#4CAF50',
+  LateralGauche: '#FF9800',
+  LateralDroit: '#FF5722',
+  MilieuDefensif: '#3F51B5',
+  MilieuCentral: '#009688',
+  MilieuOffensif: '#FFC107',
+  AilierGauche: '#8E24AA',
+  AilierDroit: '#F44336',
+  Attaquant: '#FF4081',
 }
+
 const pokemons = [
   {
     name: 'Rodri',
