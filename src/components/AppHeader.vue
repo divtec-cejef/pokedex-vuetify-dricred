@@ -19,9 +19,12 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
+  import { reactive } from 'vue'
 
-  const menuItems = ref([
+  const menuItems = reactive([
     { title: 'Accueil', path: '/', icon: 'mdi-pokeball' },
+    { title: 'Mes Pokemons Favoris', path: '/MesPokemonsFavoris', icon: 'mdi-heart' },
+    { title: 'FAQ', path: '/FoireAuxQuestions', icon: 'mdi-comment-multiple' },
+    { title: 'Monde', path: '/LeMondePokemon', icon: 'mdi-map' },
   ])
 </script>
