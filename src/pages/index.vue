@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <h1 class="mb-6 text-center">Pokédex</h1>
-
     <v-row>
       <v-col
         v-for="pokemon in pokemons"
@@ -18,8 +17,8 @@
             max-height="200"
             :src="`/images/${pokemon.img}`"
           />
-          <v-card-title>{{ pokemon.name }}</v-card-title>
-          <v-card-subtitle class="type-badges">
+          <v-card-title class="mt-3">{{ pokemon.name }}</v-card-title>
+          <v-card-subtitle class="type-badges mt-3">
             <span
               v-for="type in pokemon.type.split(',')"
               :key="type"
@@ -29,7 +28,8 @@
               {{ type.trim() }}
             </span>
           </v-card-subtitle>
-          <v-card-subtitle>Level: {{ pokemon.level }}</v-card-subtitle>
+          <v-card-subtitle class="mt-3">Level: {{ pokemon.level }}</v-card-subtitle>
+          <v-card-actions><v-btn color="red" icon="mdi-heart" />{{ toggleFavorite(pokemons) }}</v-card-actions>
         </v-card>
       </v-col>
     </v-row>
@@ -48,6 +48,11 @@
   // Fonction pour déterminer la couleur de fond en fonction du type du Pokémon
   function obtenirLaCouleurDeFondDuType (type) {
     return pokemonStore.getTypeColor(type) || '#A8A878'
+  }
+
+  function toggleFavorite (pokemon) {
+    console.log(pokemonStore.favoritesCount)
+    return pokemonStore.toggleFavorite(pokemon)
   }
 </script>
 

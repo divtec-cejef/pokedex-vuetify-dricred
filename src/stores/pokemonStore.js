@@ -19,7 +19,7 @@ const typeColors = {
 const pokemons = [
   {
     name: 'Rodri',
-    type: 'Électrique',
+    type: 'Normal',
     level: 35,
     img: 'rodri.jpg',
     description: "Pikachu stocke de l'électricité dans ses joues. Il peut produire des décharges électriques puissantes.",
