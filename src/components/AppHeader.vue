@@ -19,9 +19,8 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-
-  const menuItems = ref([
+  const menuItems = [
     { title: 'Accueil', path: '/', icon: 'mdi-pokeball' },
-  ])
+    { title: 'Favoris', path: '/pages/Favoris', icon: 'heart' },
+  ]
 </script>
